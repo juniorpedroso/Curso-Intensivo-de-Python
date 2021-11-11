@@ -1,4 +1,6 @@
-# Exercício da pag 79 um pouco melhorado
+# Exercício do capítulo 03 - Alterando, acrescentando e removendo elementos 
+# da lista de convidados - Funções para cada coisa 
+
 
 def linha():
     print('-' * 30) # Esta função cria uma linha
