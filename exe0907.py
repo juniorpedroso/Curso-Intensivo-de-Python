@@ -45,8 +45,16 @@ class Admin(Usuario):
             linguagem ([type]): [description]
         """
         super().__init__(nome, sobrenome, nivel_acesso, linguagem)
+        self.privileges = ['can add post',
+                            'can delete post',
+                            'can ban user',
+                            ]
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print(f'- {privilege}')
 
-eu = Usuario('junior', 'pedroso', 'master', 'python')
+
+eu = Usuario('junior', 'pedroso', 'admin', 'python')
 dani = Usuario('dani', 'pedroso', 'normal', 'excell')
 jose = Usuario('josé', 'de julio', 'visitante', 'clash')
 
@@ -57,3 +65,8 @@ for i in usuarios:
     i.descreva_usuario()
     i.boas_vindas()
     print()
+
+print()
+me = Admin('junior', 'pedroso', 'master', 'python')
+print('privileges')
+me.show_privileges()
