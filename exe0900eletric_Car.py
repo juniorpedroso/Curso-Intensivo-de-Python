@@ -52,6 +52,34 @@ class Car():
             print('Você não pode voltar o hodômetro!')
 
 
+class Battery():
+    """[Uma tentativa simples de modelar uma bateria para um carro elétrico]"""
+
+    def __init__(self, battery_size=70):
+        """[Inicializa os atributos da bateria]
+
+        Args:
+            battery_size (int, optional): [description]. Defaults to 70.
+        """
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """[Exibe uma frase que descreve a capacidade da bateria.]"""
+        print(f'This car has a {self.battery_size}-kWh battery.')
+
+    def get_range(self):
+        """[Exibe uma frase sobre a distância que o carro é summary]
+        """
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = f'This car can go approximately {range} ' + \
+            'miles on a full charge.'
+        print(message)
+
+
 class EletricCar(Car):
     """[Representa aspectos específicos de veículos elétricos]
 
@@ -68,30 +96,13 @@ class EletricCar(Car):
             year ([type]): [description]
         """
         super().__init__(make, model, year)
-        self.battery_size = 70
-
-    def describe_battery(self):
-        """[Exibe uma frase que descreve a capacidade da bateria.]
-        """
-        print(f'This car has a {self.battery_size}-kWh battery.')
-
-    def get_range(self):
-        """[Exibe uma frase sobre a distância que o carro é summary]
-        """
-        if self.battery_size == 70:
-            range = 240
-        elif self.battery_size == 85:
-            range = 270
-
-        message = f'This car can go approximately {range} ' + \
-            'miles on a full charge.'
-        print(message)
+        self.battery = Battery()
 
 
 my_tesla = EletricCar('tesla', 'model s', 2016)
 
 print()
 print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
-my_tesla.get_range()
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
 print()

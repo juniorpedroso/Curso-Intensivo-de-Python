@@ -58,10 +58,11 @@ class IceCreamStand(Restaurante):
 
 
 my_icecream = IceCreamStand('gelatt', 'sorveteria')
-my_icecream.show_flavors()
+
 print('\nForam atendidos 30 clientes')
 my_icecream.set_number_served(30)
 my_icecream.abrir_restaurante()
+my_icecream.show_flavors()
 print('\nForam atendidos mais 6 clientes')
 my_icecream.increment_number_served(6)
 my_icecream.abrir_restaurante()
