@@ -1,15 +1,16 @@
-file_name = 'exe1004_usuarios.txt'
+file_name = 'exe1005_enquete.txt'
 
 continua = True
 
 while continua:
-    usuario = input('Nome do usuário: (s para sair) ')
-    if usuario.upper() == 'S':
+    resposta = input('Porque você gosta de programação? (s para sair): ')
+    if resposta.upper() == 'S':
         continua = False
+    elif resposta == '':
+        print('Você não digitou nada!')
     else:
-        print(f'Bem vindo {usuario.title()}!')
         with open(file_name, 'a') as file_object:
-            file_object.write(f'{usuario}\n')
+            file_object.write(f'{resposta}\n')
 
 
 with open(file_name) as file_object:
@@ -17,4 +18,4 @@ with open(file_name) as file_object:
 
 print('\nUsuários Cadastrados')
 for line in lines:
-    print(f'- {line.strip()}')
+    print(line.strip())
