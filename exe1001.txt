@@ -1,0 +1,4 @@
+Em Python podemos fazer qualquer tipo de cálculo.
+Em Python podemos criar e editar textos.
+Em Python podemos criar qualquer tipo de objeto.
+Em Python podemos usar a imaginação e desenvolver qualquer coisa.
