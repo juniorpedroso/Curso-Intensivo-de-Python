@@ -17,4 +17,3 @@ class Employee():
             aumento (int, optional): [description]. Defaults to 5000.
         """
         self.salario += aumento
-
