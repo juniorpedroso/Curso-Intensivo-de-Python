@@ -10,16 +10,15 @@ while True:
     plt.rcParams['axes.spines.right'] = False
     plt.rcParams['axes.spines.top'] = False
 
-    rw = RandomWalk(50000)
+    rw = RandomWalk(5000)
     rw.fill_walk()
 
     # Define o tamanho da janela de plotagem
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(10, 6))
 
     # Plota os pontos e mostra o gráfico
-    point_numbers = list(range(rw.num_points))
-    plt.scatter(rw.x_values, rw.y_values, c=point_numbers,
-                cmap=plt.cm.Blues, edgecolors='none', s=1)
+
+    plt.plot(rw.x_values, rw.y_values, linewidth=1)
 
     # Enfatiza o primeiro e o último ponto
     plt.scatter(0, 0, c='green', edgecolors='none', s=100)
