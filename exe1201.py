@@ -4,8 +4,7 @@ import pygame
 vermelho = (255, 0, 0)
 verde = (0, 255, 0)
 azul = (0, 0, 255)
-imagem = 'nerd_blue2.bmp'
-
+imagem = 'nerdMini.png'
 
 class MeNerd():
     def __init__(self, screen):
