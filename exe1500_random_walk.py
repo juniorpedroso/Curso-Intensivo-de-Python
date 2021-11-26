@@ -1,6 +1,5 @@
 from random import choice
 
-
 class RandomWalk():
     """[Uma classe para gerar passeios aleatórios]"""
 
